@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/cdmx-2018-06-bc-core-am-burger-queen/static/js/runtime~main.db300044.js"
   },
   {
-    "revision": "7782f9615089a5a08622",
-    "url": "/cdmx-2018-06-bc-core-am-burger-queen/static/js/main.7782f961.chunk.js"
+    "revision": "332189e2bd23548a5037",
+    "url": "/cdmx-2018-06-bc-core-am-burger-queen/static/js/main.332189e2.chunk.js"
   },
   {
     "revision": "c6472c041f98c5e23486",
     "url": "/cdmx-2018-06-bc-core-am-burger-queen/static/js/1.c6472c04.chunk.js"
   },
   {
-    "revision": "7782f9615089a5a08622",
+    "revision": "332189e2bd23548a5037",
     "url": "/cdmx-2018-06-bc-core-am-burger-queen/static/css/main.f3951ab8.chunk.css"
   },
   {
-    "revision": "40f60a5c5b386cd475c268637b65b547",
+    "revision": "f3c414512b69e1ec5924eba1eea9f951",
     "url": "/cdmx-2018-06-bc-core-am-burger-queen/index.html"
   }
 ];

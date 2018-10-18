@@ -1,7 +1,7 @@
 {
   "main.css": "/cdmx-2018-06-bc-core-am-burger-queen/static/css/main.f3951ab8.chunk.css",
-  "main.js": "/cdmx-2018-06-bc-core-am-burger-queen/static/js/main.7782f961.chunk.js",
-  "main.js.map": "/cdmx-2018-06-bc-core-am-burger-queen/static/js/main.7782f961.chunk.js.map",
+  "main.js": "/cdmx-2018-06-bc-core-am-burger-queen/static/js/main.332189e2.chunk.js",
+  "main.js.map": "/cdmx-2018-06-bc-core-am-burger-queen/static/js/main.332189e2.chunk.js.map",
   "static/js/1.c6472c04.chunk.js": "/cdmx-2018-06-bc-core-am-burger-queen/static/js/1.c6472c04.chunk.js",
   "static/js/1.c6472c04.chunk.js.map": "/cdmx-2018-06-bc-core-am-burger-queen/static/js/1.c6472c04.chunk.js.map",
   "runtime~main.js": "/cdmx-2018-06-bc-core-am-burger-queen/static/js/runtime~main.db300044.js",
@@ -10,6 +10,6 @@
   "static/media/logo.jpg": "/cdmx-2018-06-bc-core-am-burger-queen/static/media/logo.b135272f.jpg",
   "static/media/Offer.png": "/cdmx-2018-06-bc-core-am-burger-queen/static/media/Offer.83d105c3.png",
   "index.html": "/cdmx-2018-06-bc-core-am-burger-queen/index.html",
-  "precache-manifest.d1a885a5a939e524af7685ec6a862636.js": "/cdmx-2018-06-bc-core-am-burger-queen/precache-manifest.d1a885a5a939e524af7685ec6a862636.js",
+  "precache-manifest.43c74f33e25a336a969f67b1c3817788.js": "/cdmx-2018-06-bc-core-am-burger-queen/precache-manifest.43c74f33e25a336a969f67b1c3817788.js",
   "service-worker.js": "/cdmx-2018-06-bc-core-am-burger-queen/service-worker.js"
 }
