@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/cdmx-2018-06-bc-core-am-burger-queen/static/css/main.f12b2300.chunk.css"
   },
   {
-    "revision": "7b43483983190fefa8afe8b0bb2045bb",
+    "revision": "50e038387908608f6b086fa96751cbf9",
     "url": "/cdmx-2018-06-bc-core-am-burger-queen/index.html"
   }
 ];
