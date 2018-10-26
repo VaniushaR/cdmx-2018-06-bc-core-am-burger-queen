@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "firebase": "^5.5.5",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-firebaseui": "^3.1.2",
+    "react-materialize": "^2.4.7",
     "react-scripts": "2.0.5"
   },
-  "homepage": "http://gitname.github.io/cdmx-2018-06-bc-core-am-burger-queen/",
+  "homepage": "http://vaniushar.github.io/cdmx-2018-06-bc-core-am-burger-queen/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -24,5 +27,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "firebaseui": "^3.4.1",
+    "gh-pages": "^2.0.1"
+  }
 }

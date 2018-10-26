@@ -1,19 +1,47 @@
 import React, { Component } from 'react';
-import logo from './Assets/logo.jpg';
+import Logo from './Assets/burguerqB.jpg';
 import './App.css';
-import Welcome from './Components/Welcome';
+import monthlyOffer from './Assets/Offer.png';
+import {
+  Navbar,
+  NavItem,
+  Button,
+  Icon,
+  Card,
+  CardTitle,
+  Row,
+  Col
+} from 'react-materialize';
+import Login from './Components/Login';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="Welcome">Welcome to Burger Queen!</h1>
-          </header>
+        <div>
+          <Navbar right large>
+            <NavItem>
+              <img className="logo" src={Logo} alt="Logo" />
+            </NavItem>
+            <NavItem onClick={() => console.log('test click')}>TEAM</NavItem>
+          </Navbar>
+          <div className="">
+            <Row>
+              <Col s={6} m={6}>
+                <section className="action">
+                  <Button large waves="yellow">
+                    <Icon right>restaurant</Icon>
+                    ORDENAR
+                  </Button>
+                </section>
+              </Col>
+              <Col s={6} m={6}>
+                <img className="offer-img" src={monthlyOffer} Octubre />
+              </Col>
+            </Row>
+          </div>
         </div>
-        <Welcome />
+        <Login />
       </div>
     );
   }

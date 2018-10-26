@@ -1,8 +1,26 @@
-.App {
-  background-color: black;
-  color: white;
+.logo {
+  height: 120px;
+  width: 190px;
+  border-radius: 100%;
+}
+.action {
+  padding: 10%;
+  position: flex;
 }
 
+.offer-img {
+  padding: 5%;
+  height: 50%;
+  width: 50%;
+}
+.navigation {
+  height: 30%;
+}
+.offert {
+  height: 120px;
+  width: 190px;
+}
+/*
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 70px;
@@ -30,3 +48,4 @@
     transform: rotate(360deg);
   }
 }
+*/

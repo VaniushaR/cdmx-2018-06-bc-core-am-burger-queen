@@ -1,0 +1,58 @@
+{
+  "Desayunos": [
+    {
+      "name": "Café americano",
+      "price": 5,
+      "pic": "../Assets/Menu_items/CafeAmericano.jpg"
+    },
+    {
+      "name": "Café con leche",
+      "price": 7
+    },
+    {
+      "name": "Jugo de naranja",
+      "price": 10
+    },
+    {
+      "name": "Sánwich de queso con jamón",
+      "price": 15
+    }
+  ],
+
+  "Comidas": [
+    {
+      "Hamburguesa": {
+        "Simple": {
+          "of": "carne de res",
+          "price": 10,
+          "carne de pollo": 10,
+          "vegetariana": 10
+        },
+
+        "Doble": {
+          "carne de res": 15,
+          "carne de pollo": 15,
+          "vegetariana": 15
+        },
+        "Extra": {
+          "queso extra": 1,
+          "con huevo": 1
+        }
+      },
+      "Acompañamientos": {
+        "Papas a la francesa": 5,
+        "Anillos de cebolla": 5
+      },
+      "Bebidas": {
+        "Agua de Sabor": {
+          "500ml": 5,
+          "750ml": 7
+        },
+        "Refresco": {
+          "500ml": 5,
+          "750ml": 7
+        }
+      }
+    }
+  ]
+}
