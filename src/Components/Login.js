@@ -5,6 +5,7 @@ import firebaseInit from './Credentials';
 import Menu from './Menu';
 import avatar from '../Assets/chef.png';
 import Time from './Date';
+import { Col, Card, Row, Button } from 'react-materialize';
 
 class Login extends Component {
   firebaseInit;
@@ -31,25 +32,38 @@ class Login extends Component {
       <div>
         {this.state.isSignedIn ? (
           <div>
-            <div> Has ingresado</div>
-            <button onClick={() => firebase.auth().signOut()}>
-              Cerrar Sesión
-            </button>
-            <h2>Sesión de {firebase.auth().currentUser.displayName}</h2>
-            <img alt="chef avatar" src={avatar} />
-            <Time />
+            <Row>
+              <Col m={6} s={12}>
+                <Card
+                  className="deep-purple darken-3"
+                  textClassName="white-text"
+                  title={
+                    <h5 className="waiter">
+                      {firebase.auth().currentUser.displayName} is working{' '}
+                    </h5>
+                  }
+                  actions={[
+                    <Button onClick={() => firebase.auth().signOut()}>
+                      Close my session
+                    </Button>
+                  ]}
+                >
+                  <img className="avatar" alt="chef avatar" src={avatar} />
+                  <Time />
+                </Card>
+              </Col>
+            </Row>
+
             <Menu />
           </div>
         ) : (
           <div>
-            No has iniciado sesión
             <StyledFirebaseAuth
               uiConfig={this.uiConfig}
               firebaseAuth={firebase.auth()}
             />
           </div>
         )}
-        )
       </div>
     );
   }

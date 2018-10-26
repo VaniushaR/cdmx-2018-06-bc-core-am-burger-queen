@@ -1,14 +1,29 @@
 import React, { Component } from 'react';
 import MenuData from '../Data/menu.json';
+import {
+  Card,
+  CardTitle,
+  Row,
+  Col,
+  Button,
+  Collection,
+  CollectionItem,
+  Icon
+} from 'react-materialize';
 
 class Breakfast extends Component {
   constructor() {
     super();
     this.state = {
-      order: []
+      order: [],
+      client: ''
     };
     console.log(this.state.order);
   }
+  nameKeeper = event => {
+    console.log(event.target.value);
+    this.setState({ client: event.target.value });
+  };
 
   handleOnClick = event => {
     const { value, name } = event.target;
@@ -29,16 +44,25 @@ class Breakfast extends Component {
       return (
         <div>
           <div>
-            <h4>{item.name}</h4>
-            <button
-              onClick={this.handleOnClick}
-              name={item.name}
-              value={item.price}
-              type="button"
-            >
-              {item.price}
-            </button>
-            <img src={item.pic} />
+            <Col s={4} m={4}>
+              <Card
+                className="medium"
+                header={<CardTitle image={item.pic}>{item.name}</CardTitle>}
+                actions={[
+                  <Button
+                    large
+                    onClick={this.handleOnClick}
+                    name={item.name}
+                    value={item.price}
+                    type="button"
+                  >
+                    $ {item.price}
+                  </Button>
+                ]}
+              >
+                {item.description}
+              </Card>
+            </Col>
           </div>
         </div>
       );
@@ -46,18 +70,60 @@ class Breakfast extends Component {
 
     return (
       <div>
-        {List}
-        <div>
-          <h3>Tu Orden:</h3>
-          {this.state.order.map(item => {
-            console.log(item);
-            return (
-              <p>
-                {item.name} {item.price}
-              </p>
-            );
-          })}
-        </div>
+        <Row>
+          {List}
+          <div>
+            <Col s={4} m={4}>
+              <input
+                type="text"
+                onChange={this.nameKeeper.bind(this)}
+                placeholder="Nombre del cliente"
+              />
+
+              <Collection
+                header={
+                  <div>
+                    <h4>Order of:</h4>
+                    <h3> {this.state.client}</h3>
+                  </div>
+                }
+              >
+                <CollectionItem>
+                  {this.state.order.map(item => {
+                    console.log(item);
+                    return (
+                      <h6>
+                        {item.name} {item.price}
+                        <Button
+                          floating
+                          small
+                          className="red"
+                          waves="light"
+                          icon="clear"
+                          onClick={() => {
+                            this.state.order.map(item => {
+                              this.state.order.pop();
+                              console.log('pop' + this.state.order);
+                            });
+                          }}
+                        />
+                      </h6>
+                    );
+                  })}{' '}
+                </CollectionItem>
+                <CollectionItem>
+                  {new Date().toLocaleTimeString()}
+                </CollectionItem>
+                <Button large waves="light">
+                  <Icon large right>
+                    check
+                  </Icon>
+                  ORDER
+                </Button>
+              </Collection>
+            </Col>
+          </div>
+        </Row>
       </div>
     );
   }

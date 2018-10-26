@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardTitle } from 'react-materialize';
+import { Row, Col, Button, Icon } from 'react-materialize';
 import Breakfast from './Breakfast';
 
 class Menu extends Component {
@@ -19,24 +19,39 @@ class Menu extends Component {
     }
     return (
       <div>
-        <h2>Menú</h2>
-        <button
-          onClick={() => {
-            this.setState({ seeBreakfast: true });
-            console.log(this.state.seeBreakfast);
-          }}
-        >
-          DESAYUNOS
-        </button>
-        <Card
-          className="small"
-          header={<CardTitle image="img/sample-1.jpg">Card Title</CardTitle>}
-          actions={[<a href="#">This is a Link</a>]}
-        >
-          I am a very simple card. I am good at containing small bits of
-          information. I am convenient because I require little markup to use
-          effectively.
-        </Card>
+        <h2>Clients Order: </h2>
+        <Row>
+          <Col s={6} m={6}>
+            <section className="action">
+              <Button
+                large
+                waves="yellow"
+                onClick={() => {
+                  this.setState({ seeBreakfast: true });
+                  console.log(this.state.seeBreakfast);
+                }}
+              >
+                <Icon right>local_cafe</Icon>
+                BREAKFAST
+              </Button>
+            </section>
+          </Col>
+          <Col s={6} m={6}>
+            <section className="action">
+              <Button
+                large
+                waves="yellow"
+                onClick={() => {
+                  this.setState({ seeBreakfast: true });
+                  console.log(this.state.seeBreakfast);
+                }}
+              >
+                <Icon right>restaurant</Icon>
+                DINNER
+              </Button>
+            </section>
+          </Col>
+        </Row>
       </div>
     );
   }

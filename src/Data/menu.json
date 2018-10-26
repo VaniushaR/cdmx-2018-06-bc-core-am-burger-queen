@@ -1,58 +1,112 @@
 {
   "Desayunos": [
     {
-      "name": "Café americano",
+      "name": "American Coffee",
       "price": 5,
-      "pic": "../Assets/Menu_items/CafeAmericano.jpg"
+      "description": "Cup of 320 ml, strong colombian organic coffee",
+      "pic": "http://www.antojitosdecolombia.com/wp-content/uploads/2017/08/Americano.png"
     },
     {
-      "name": "Café con leche",
-      "price": 7
+      "name": "Latte Coffee",
+      "price": 7,
+      "description": "Cup of 320 ml, with soy milk or almond milk",
+      "pic": "http://www.oconowocc.com/wp-content/uploads/2014/05/7e0976f7a9bc64103dd1448b79ae1cc9a4a645e25245.jpg"
     },
     {
-      "name": "Jugo de naranja",
-      "price": 10
+      "name": "Orange Juice",
+      "price": 10,
+      "description": "Glass of 450ml, fresh and organic orange juice",
+      "pic": "https://st3.depositphotos.com/14635436/17800/i/1600/depositphotos_178005276-stock-photo-glass-freshly-squeezed-orange-juice.jpg"
     },
     {
-      "name": "Sánwich de queso con jamón",
-      "price": 15
+      "name": "Ham and Cheese sandwich",
+      "price": 15,
+      "description": "Two slices of toasted whole grains bread with melted cheddar cheese",
+      "pic": "https://sevilla.abc.es/gurme//wp-content/uploads/2013/08/receta-sandwich-pollo.jpg"
     }
   ],
 
   "Comidas": [
     {
-      "Hamburguesa": {
-        "Simple": {
-          "of": "carne de res",
-          "price": 10,
-          "carne de pollo": 10,
-          "vegetariana": 10
+      "Hamburguesa Simple": [
+        {
+          "kind": "carne de res",
+          "price": 10
+        },
+        {
+          "kind": "carne de pollo",
+          "price": 10
+        },
+        {
+          "kind": "vegetariana",
+          "price": 10
+        }
+      ],
+
+      "Hamburguesa Doble": [
+        {
+          "kind": "carne de res",
+          "price": 15
         },
 
-        "Doble": {
-          "carne de res": 15,
-          "carne de pollo": 15,
-          "vegetariana": 15
+        {
+          "kind": "carne de pollo",
+          "price": 15
         },
-        "Extra": {
-          "queso extra": 1,
-          "con huevo": 1
+
+        {
+          "kind": "vegetariana",
+          "price": 15
         }
-      },
-      "Acompañamientos": {
-        "Papas a la francesa": 5,
-        "Anillos de cebolla": 5
-      },
-      "Bebidas": {
-        "Agua de Sabor": {
-          "500ml": 5,
-          "750ml": 7
+      ]
+    }
+  ],
+
+  "Extra": [
+    {
+      "kind": "queso extra",
+      "price": 1
+    },
+    {
+      "kind": "con huevo",
+      "price": 1
+    }
+  ],
+
+  "Acompañamientos": [
+    {
+      "kind": "Papas a la francesa",
+      "price": 5
+    },
+
+    {
+      "kind": "Anillos de cebolla",
+      "price": 5
+    }
+  ],
+
+  "Bebidas": [
+    {
+      "Agua de Sabor": [
+        {
+          "kind": "500ml",
+          "price": 5
         },
-        "Refresco": {
-          "500ml": 5,
-          "750ml": 7
+        {
+          "kind": "750ml",
+          "price": 7
         }
-      }
+      ],
+      "Refresco": [
+        {
+          "kind": "500ml",
+          "price": 5
+        },
+        {
+          "kind": "750ml",
+          "price": 7
+        }
+      ]
     }
   ]
 }
