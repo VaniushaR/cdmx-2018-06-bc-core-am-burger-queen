@@ -5,13 +5,20 @@ import firebaseInit from './Credentials';
 import Menu from './Menu';
 import avatar from '../Assets/chef.png';
 import Time from './Date';
-import { Col, Card, Row, Button } from 'react-materialize';
+import {
+  Col,
+  Card,
+  Row,
+  Button,
+  Collapsible,
+  CollapsibleItem
+} from 'react-materialize';
 
 class Login extends Component {
   firebaseInit;
   state = { isSignedIn: false };
   uiConfig = {
-    // Popup signin flow rather than redirect flow.
+    // Popup sign in flow rather than redirect flow.
     signInFlow: 'popup',
     signInSuccessUrl: '/signedIn',
     signInOptions: [firebase.auth.EmailAuthProvider.PROVIDER_ID],
@@ -32,28 +39,20 @@ class Login extends Component {
       <div>
         {this.state.isSignedIn ? (
           <div>
-            <Row>
-              <Col m={6} s={12}>
-                <Card
-                  className="deep-purple darken-3"
-                  textClassName="white-text"
-                  title={
-                    <h5 className="waiter">
-                      {firebase.auth().currentUser.displayName} is working{' '}
-                    </h5>
-                  }
-                  actions={[
-                    <Button onClick={() => firebase.auth().signOut()}>
-                      Close my session
-                    </Button>
-                  ]}
-                >
-                  <img className="avatar" alt="chef avatar" src={avatar} />
-                  <Time />
-                </Card>
-              </Col>
-            </Row>
-
+            <Collapsible popout defaultActiveKey={1}>
+              <CollapsibleItem
+                header={firebase.auth().currentUser.displayName + ' is working'}
+                icon="account_circle"
+              >
+                <Time />
+                <h5>
+                  ¡Nice Job {firebase.auth().currentUser.displayName + '!'}
+                </h5>
+                <Button onClick={() => firebase.auth().signOut()}>
+                  Close my session
+                </Button>
+              </CollapsibleItem>
+            </Collapsible>
             <Menu />
           </div>
         ) : (

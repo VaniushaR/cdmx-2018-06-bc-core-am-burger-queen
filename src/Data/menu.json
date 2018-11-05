@@ -58,18 +58,18 @@
           "kind": "vegetariana",
           "price": 15
         }
-      ]
-    }
-  ],
+      ],
 
-  "Extra": [
-    {
-      "kind": "queso extra",
-      "price": 1
-    },
-    {
-      "kind": "con huevo",
-      "price": 1
+      "Extras": [
+        {
+          "kind": "queso extra",
+          "price": 1
+        },
+        {
+          "kind": "con huevo",
+          "price": 1
+        }
+      ]
     }
   ],
 

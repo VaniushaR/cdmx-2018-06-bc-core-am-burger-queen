@@ -4,7 +4,7 @@ class Time extends Component {
   render() {
     return (
       <div>
-        <h5> You are active since {new Date().toLocaleTimeString()}</h5>
+        <h6> You are active since {new Date().toLocaleTimeString()}</h6>
       </div>
     );
   }
