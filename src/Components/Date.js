@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+//componente para actualizar la fecha y hora
 class Time extends Component {
   render() {
     return (

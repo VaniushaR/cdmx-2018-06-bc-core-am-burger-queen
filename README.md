@@ -2,14 +2,11 @@
 
 ## Preámbulo
 
-Nos acaban de enviar un correo con una solicitud para un nuevo proyecto. Hay un
-restaurante que nos ha contactado porque quieren que alguien les construya una
-interfaz donde puedan tomar pedidos usando una tablet.
+Este proyecto busca ser una solución a la recepción de pedidos en un restaurante de comida rápida, con internet intermitente y con un personal limitado.
 
-![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
+![Burger-Quee](./src/Assets/Documentation/Ipad.png)
 
-Como punto de partida,
-nos comparten el siguiente correo recibido del cliente:
+Como punto de partida, se tiene la siguiente historia de usuario que nos comparten de un correo recibido del cliente:
 
 > Somos **Burguer Queen**, una cadena de comida rápida 24hrs.
 >
@@ -19,12 +16,12 @@ nos comparten el siguiente correo recibido del cliente:
 >
 > Tenemos 2 menús: uno para el desayuno, que es muy sencillo:
 >
-> | Item                      |Precio|
-> |---------------------------|------|
-> | Cafe americano            |    5 |
-> | Cafe con leche            |    7 |
-> | Sandwich de jamón y queso |   10 |
-> | Jugo natural              |    7 |
+> | Item                      | Precio |
+> | ------------------------- | ------ |
+> | Cafe americano            | 5      |
+> | Cafe con leche            | 7      |
+> | Sandwich de jamón y queso | 10     |
+> | Jugo natural              | 7      |
 >
 > Y un menú para el resto del dia:
 >
@@ -148,7 +145,6 @@ functions):
 │   ├── index.js
 │   ├── package.json
 └── README.md
-
 ```
 
 Por otro lado, la parte de la interfaz no está incluida, por lo cual, deberás de
@@ -171,33 +167,33 @@ tipo _story board_, info de despliegue e instrucciones para developers
 
 #### Hito 1: Tomar pedidos
 
-* Ingresar nombre del cliente.
-* Filtrar _menú_ por _desayuno_ y _resto del día_.
-* Agregar ítem al pedido.
-* Eliminar ítem del pedido.
-* Mostrar _resumen_ de pedido con todos los items y el total.
-* Enviar a cocina (esto debe guardar el pedido).
+- Ingresar nombre del cliente.
+- Filtrar _menú_ por _desayuno_ y _resto del día_.
+- Agregar ítem al pedido.
+- Eliminar ítem del pedido.
+- Mostrar _resumen_ de pedido con todos los items y el total.
+- Enviar a cocina (esto debe guardar el pedido).
 
 #### Hito 2: Ver/atender pedidos
 
-* Vista de pedidos pendientes
-* Marcar pedido como listo
-* Ver historial de pedidos
+- Vista de pedidos pendientes
+- Marcar pedido como listo
+- Ver historial de pedidos
 
 #### Hito 3: Autenticación
 
-* Inicio de sesión
-* Restaurar contraseña
+- Inicio de sesión
+- Restaurar contraseña
 
 ### UX
 
-* Debe **verse bien y funcionar bien en tablets**.
-* **No queremos una app nativa**, sino una web app que se pueda _agregar a la
+- Debe **verse bien y funcionar bien en tablets**.
+- **No queremos una app nativa**, sino una web app que se pueda _agregar a la
   pantalla de inicio_ como PWA.
-* Queremos botones grandes para fácil uso en pantallas táctiles (touch screens).
-* Queremos el estado actual del pedido siempre visible mientras tomamos un
+- Queremos botones grandes para fácil uso en pantallas táctiles (touch screens).
+- Queremos el estado actual del pedido siempre visible mientras tomamos un
   pedido.
-* Queremos que sea accesible y que funcione bien en tablets iOS y Android.
+- Queremos que sea accesible y que funcione bien en tablets iOS y Android.
 
 ## Hacker edition
 
@@ -205,13 +201,13 @@ Una vez que tengamos el sistema básico implementado, nos gustaría explorar
 nuevas posibilidades, y estamos abiertos a cualquier sugerencia que tengan.
 Algunas de las ideas que nos ha sugerido nuestros clientes son:
 
-* agregar combos al menú
-* cupones de descuento
-* programa de fidelidad, etc.
-* agregar _mesas_, de forma que los pedidos se puedan tomar en mesa en vez de
+- agregar combos al menú
+- cupones de descuento
+- programa de fidelidad, etc.
+- agregar _mesas_, de forma que los pedidos se puedan tomar en mesa en vez de
   dando el nombre del cliente al cajero.
-* crear/editar/borrar usuarios
-* ver estadísticas de pedidos
+- crear/editar/borrar usuarios
+- ver estadísticas de pedidos
 
 ## Entregables
 
@@ -223,59 +219,59 @@ puedas haber encontrado en el camino.
 
 ### Tech
 
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| **JavaScript** | |
-| Estilo | 4
-| Nomenclatura/semántica | 3
-| Funciones/modularidad | 3
-| Estructuras de datos | 3
-| Tests | 3
-| **HTML** | |
-| Validación | 3
-| Estilo | 3
-| Semántica | 3
-| SEO | n/a
-| **CSS** | |
-| DRY | 3
-| Responsive | 3
-| **SCM** | |
-| Git | 3
-| GitHub | 3
-| **CS** | |
-| Lógica | 3
-| Arquitectura | 2
-| Patrones/paradigmas | n/a
+| Habilidad              | Nivel esperado |
+| ---------------------- | -------------- |
+| **JavaScript**         |                |
+| Estilo                 | 4              |
+| Nomenclatura/semántica | 3              |
+| Funciones/modularidad  | 3              |
+| Estructuras de datos   | 3              |
+| Tests                  | 3              |
+| **HTML**               |                |
+| Validación             | 3              |
+| Estilo                 | 3              |
+| Semántica              | 3              |
+| SEO                    | n/a            |
+| **CSS**                |                |
+| DRY                    | 3              |
+| Responsive             | 3              |
+| **SCM**                |                |
+| Git                    | 3              |
+| GitHub                 | 3              |
+| **CS**                 |                |
+| Lógica                 | 3              |
+| Arquitectura           | 2              |
+| Patrones/paradigmas    | n/a            |
 
 ### UX
 
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| User Centricity | 3
-| Entrevistas | n/a |
-| Testing | 3
-| User Flow | 3
-| Jerarquía | 3
-| Alineación | 3
-| Contraste | 3
-| Color | 3
-| Tipografía | 3
+| Habilidad       | Nivel esperado |
+| --------------- | -------------- |
+| User Centricity | 3              |
+| Entrevistas     | n/a            |
+| Testing         | 3              |
+| User Flow       | 3              |
+| Jerarquía       | 3              |
+| Alineación      | 3              |
+| Contraste       | 3              |
+| Color           | 3              |
+| Tipografía      | 3              |
 
 ### Habilidades Blandas
 
 Para este proyecto esperamos que ya hayas alcanzado el nivel 4 en todas tus
 habilidades blandas. Te aconsejamos revisar la rúbrica:
 
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| Planificación y organización | 4
-| Autoaprendizaje | 4
-| Solución de Problemas | 4
-| Dar y recibir feedback | 4
-| Adaptabilidad | 4
-| Trabajo en equipo (trabajo colaborativo y responsabilidad) | n/a
-| Comunicación eficaz | 4
-| Presentaciones | 4
+| Habilidad                                                  | Nivel esperado |
+| ---------------------------------------------------------- | -------------- |
+| Planificación y organización                               | 4              |
+| Autoaprendizaje                                            | 4              |
+| Solución de Problemas                                      | 4              |
+| Dar y recibir feedback                                     | 4              |
+| Adaptabilidad                                              | 4              |
+| Trabajo en equipo (trabajo colaborativo y responsabilidad) | n/a            |
+| Comunicación eficaz                                        | 4              |
+| Presentaciones                                             | 4              |
 
 ## Primeros pasos
 
@@ -328,7 +324,7 @@ habilidades blandas. Te aconsejamos revisar la rúbrica:
 
 10. Llegado a este punto ya puedes comenzar con el _front-end_ :wink:
 
-***
+---
 
 Nota para estudiantes que elijan React y quieran usar `create-react-app`:
 
@@ -348,93 +344,93 @@ rm -rf burger-queen-tmp
 cd burger-queen
 ```
 
-***
+---
 
 ## Pistas / Tips
 
 ### Frameworks / libraries
 
-* [React](https://reactjs.org/)
-* [Vue](https://vuejs.org/)
-* [Angular](https://angular.io/)
+- [React](https://reactjs.org/)
+- [Vue](https://vuejs.org/)
+- [Angular](https://angular.io/)
 
 ### Herramientas
 
-* [npm-scripts](https://docs.npmjs.com/misc/scripts)
-* [Babel](https://babeljs.io/)
-* [webpack](https://webpack.js.org/)
+- [npm-scripts](https://docs.npmjs.com/misc/scripts)
+- [Babel](https://babeljs.io/)
+- [webpack](https://webpack.js.org/)
 
 ### PWA
 
-* [Tu primera Progressive Web App - Google developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es)
-* [Progressive Web Apps - codigofacilito.com](https://codigofacilito.com/articulos/progressive-apps)
-* [offlinefirst.org](http://offlinefirst.org/)
-* [Usando Service Workers - MDN](https://developer.mozilla.org/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-* [Cómo habilitar datos sin conexión - Firebase Docs](https://firebase.google.com/docs/firestore/manage-data/enable-offline?hl=es-419)
+- [Tu primera Progressive Web App - Google developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es)
+- [Progressive Web Apps - codigofacilito.com](https://codigofacilito.com/articulos/progressive-apps)
+- [offlinefirst.org](http://offlinefirst.org/)
+- [Usando Service Workers - MDN](https://developer.mozilla.org/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Cómo habilitar datos sin conexión - Firebase Docs](https://firebase.google.com/docs/firestore/manage-data/enable-offline?hl=es-419)
 
 ### Serverless
 
-* [Qué es eso de serverless? - @PamRucinque en Medium](https://medium.com/@PamRucinque/qu%C3%A9-es-eso-de-serverless-f4f6c8949b87)
-* [Qué es Serverless? | FooBar - YouTube](https://www.youtube.com/watch?v=_SYHUpLi-2U)
-* [Firebase](https://firebase.google.com/)
-* [Serverless Architectures - Martin Fowler](https://www.martinfowler.com/articles/serverless.html)
+- [Qué es eso de serverless? - @PamRucinque en Medium](https://medium.com/@PamRucinque/qu%C3%A9-es-eso-de-serverless-f4f6c8949b87)
+- [Qué es Serverless? | FooBar - YouTube](https://www.youtube.com/watch?v=_SYHUpLi-2U)
+- [Firebase](https://firebase.google.com/)
+- [Serverless Architectures - Martin Fowler](https://www.martinfowler.com/articles/serverless.html)
 
 ### Cloud functions
 
-* [Cloud functions - Firebase Docs](https://firebase.google.com/docs/functions/?hl=es-419)
+- [Cloud functions - Firebase Docs](https://firebase.google.com/docs/functions/?hl=es-419)
 
 ## Checklist
 
 ### General
 
-* [ ] Producto final sigue los lineamientos del diseño.
+- [ ] Producto final sigue los lineamientos del diseño.
 
 ### `README.md`
 
-* [ ] Documenta proceso de diseño.
-* [ ] Incluye info para developers (deps, instalación, uso, despliegue, testing,
-  ...).
+- [ ] Documenta proceso de diseño.
+- [ ] Incluye info para developers (deps, instalación, uso, despliegue, testing,
+      ...).
 
 ### Lighthouse
 
-* [ ] 80% o más en sección _Performance_.
-* [ ] 80% o más en sección _Progressive Web App_.
-* [ ] 80% o más en sección _Accessibility_.
-* [ ] 80% o más en sección _Best Practices_.
+- [ ] 80% o más en sección _Performance_.
+- [ ] 80% o más en sección _Progressive Web App_.
+- [ ] 80% o más en sección _Accessibility_.
+- [ ] 80% o más en sección _Best Practices_.
 
 ### Tests
 
-* [ ] 70% o más en cobertura de _statements_.
-* [ ] 70% o más en cobertura de _functions_.
-* [ ] 70% o más en cobertura de _lines_.
-* [ ] 70% o más en cobertura de _branches_.
+- [ ] 70% o más en cobertura de _statements_.
+- [ ] 70% o más en cobertura de _functions_.
+- [ ] 70% o más en cobertura de _lines_.
+- [ ] 70% o más en cobertura de _branches_.
 
 ### UI
 
 #### Hito 1: Tomar pedidos
 
-* [ ] Ingresar nombre del cliente.
-* [ ] Filtrar _menú_ por _desayuno_ y _resto del día_.
-* [ ] Agregar ítem al pedido.
-* [ ] Eliminar ítem del pedido.
-* [ ] Mostrar _resumen_ de pedido con todos los items y el total.
-* [ ] Enviar a cocina (esto debe guardar el pedido).
+- [ ] Ingresar nombre del cliente.
+- [ ] Filtrar _menú_ por _desayuno_ y _resto del día_.
+- [ ] Agregar ítem al pedido.
+- [ ] Eliminar ítem del pedido.
+- [ ] Mostrar _resumen_ de pedido con todos los items y el total.
+- [ ] Enviar a cocina (esto debe guardar el pedido).
 
 #### Hito 2: Ver/atender pedidos
 
-* [ ] Vista de pedidos pendientes.
-* [ ] Marcar pedido como listo.
-* [ ] Ver historial de pedidos.
+- [ ] Vista de pedidos pendientes.
+- [ ] Marcar pedido como listo.
+- [ ] Ver historial de pedidos.
 
 #### Hito 3: Autenticación
 
-* [ ] Inicio de sesión.
-* [ ] Restaurar contraseña.
+- [ ] Inicio de sesión.
+- [ ] Restaurar contraseña.
 
 ### UX
 
-* [ ] Se _ve_ bien y _funciona_ bien en tablets.
-* [ ] Se puede _agregar a la pantalla de inicio_ como web app (tiene manifest,
-  íconos, ...) en iOS y Android.
-* [ ] Uso fácil en pantallas táctiles (touch screens).
-* [ ] Estado actual del pedido siempre visible mientras tomamos un pedido.
+- [ ] Se _ve_ bien y _funciona_ bien en tablets.
+- [ ] Se puede _agregar a la pantalla de inicio_ como web app (tiene manifest,
+      íconos, ...) en iOS y Android.
+- [ ] Uso fácil en pantallas táctiles (touch screens).
+- [ ] Estado actual del pedido siempre visible mientras tomamos un pedido.

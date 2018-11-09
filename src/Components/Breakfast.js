@@ -26,6 +26,8 @@ class Breakfast extends Component {
     this.setState({ client: event.target.value });
   };
 
+  //this.setState({order : event.target.value});
+
   handleOnClick = event => {
     const { value, name } = event.target;
     const orderCopy = this.state.order;
@@ -44,9 +46,9 @@ class Breakfast extends Component {
     });
   };
   //function to delete all the order
-  deleteall(items) {
-    this.setState({ order: [] });
-  }
+  deleteall = event => {
+    console.log(this.state.order);
+  };
 
   //function to delete one by one item to
   delete(item) {
@@ -152,12 +154,23 @@ class Breakfast extends Component {
                     <span>{new Date().toDateString()}</span>
                   </CollectionItem>
                   <CollectionItem>
-                    <Button large waves="light">
-                      <Icon large right>
-                        check
-                      </Icon>
-                      ORDER
-                    </Button>
+                    <div className="buttons">
+                      <Button
+                        floating
+                        large
+                        className="red"
+                        waves="light"
+                        icon="delete"
+                        onClick={this.deleteall.bind()}
+                      />
+
+                      <Button large waves="light">
+                        <Icon large right>
+                          check
+                        </Icon>
+                        ORDER
+                      </Button>
+                    </div>
                   </CollectionItem>
                 </Collection>
               </Card>

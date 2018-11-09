@@ -31,6 +31,11 @@
 .waiter {
   color: white;
 }
+
+.buttons {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
 /*
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
