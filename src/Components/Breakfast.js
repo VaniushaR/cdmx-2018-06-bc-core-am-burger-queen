@@ -27,7 +27,6 @@ class Breakfast extends Component {
   };
 
   //this.setState({order : event.target.value});
-
   handleOnClick = event => {
     const { value, name } = event.target;
     const orderCopy = this.state.order;
@@ -47,18 +46,24 @@ class Breakfast extends Component {
   };
   //function to delete all the order
   deleteall = event => {
-    console.log(this.state.order);
+    if (window.confirm('Are you sure you want to delete all the order?')) {
+      this.setState({
+        order: []
+      });
+      console.log(this.state.order);
+    }
   };
 
   //function to delete one by one item to
-  delete(item) {
+  delete = index => {
+    console.log(index);
     this.setState({
-      order: this.state.order.filter((e, i) => {
-        console.log(i);
-        return i !== item;
+      order: this.state.order.filter((item, i) => {
+        return i !== index;
       })
     });
-  }
+    console.log(this.state.order);
+  };
 
   /*  //  deleteTask(task) {
     this.setState({
@@ -68,12 +73,12 @@ class Breakfast extends Component {
     });
   } */
   render() {
-    const List = MenuData.Desayunos.map(item => {
+    const List = MenuData.Desayunos.map((item, i) => {
       //console.log(item.name);
       //console.log(item.price);
       return (
         <div>
-          <div>
+          <div key={i}>
             <Col s={4} m={4}>
               <Card
                 className="medium"
@@ -132,11 +137,10 @@ class Breakfast extends Component {
                             className="red"
                             waves="light"
                             icon="clear"
-                            onClick={() => {
-                              {
-                                this.delete.bind(this, i);
-                              }
-                            }}
+                            onClick={
+                              // console.log('clear btn');
+                              this.delete.bind(this, i)
+                            }
                           />
                         </h6>
                       );
@@ -161,7 +165,7 @@ class Breakfast extends Component {
                         className="red"
                         waves="light"
                         icon="delete"
-                        onClick={this.deleteall.bind()}
+                        onClick={this.deleteall.bind(this)}
                       />
 
                       <Button large waves="light">
