@@ -19,14 +19,13 @@ class Breakfast extends Component {
       client: '',
       total: 0
     };
-    //console.log(this.state.order);
   }
+
   nameKeeper = event => {
-    //console.log(event.target.value);
     this.setState({ client: event.target.value });
   };
 
-  //this.setState({order : event.target.value});
+  //Function to add or rest the value of the items
   handleOnClick = event => {
     const { value, name } = event.target;
     const orderCopy = this.state.order;
@@ -44,34 +43,37 @@ class Breakfast extends Component {
       total: totalPay
     });
   };
-  //function to delete all the order
+  //function to delete all the order:
   deleteall = event => {
     if (window.confirm('Are you sure you want to delete all the order?')) {
       this.setState({
-        order: []
+        order: [],
+        total: 0
       });
-      console.log(this.state.order);
     }
   };
 
-  //function to delete one by one item to
+  //delete function to erase one by one item of the order:
   delete = index => {
-    console.log(index);
     this.setState({
       order: this.state.order.filter((item, i) => {
+        console.log('forEach item', item);
+
         return i !== index;
       })
     });
-    console.log(this.state.order);
+    this.state.order.forEach((item, i) => {
+      if (i === index) {
+        console.log('forEach sustraction', this.state.total);
+        this.setState({ total: this.state.total - parseInt(item.price) });
+      }
+    });
+  };
+  //Function to send the order to the kitchen and being processed
+  sendOrder = () => {
+    console.log(this.state);
   };
 
-  /*  //  deleteTask(task) {
-    this.setState({
-      toDo: this.state.toDo.filter((e, i) => {
-        return i !== task;
-      })
-    });
-  } */
   render() {
     const List = MenuData.Desayunos.map((item, i) => {
       //console.log(item.name);
@@ -168,7 +170,11 @@ class Breakfast extends Component {
                         onClick={this.deleteall.bind(this)}
                       />
 
-                      <Button large waves="light">
+                      <Button
+                        large
+                        waves="light"
+                        onClick={this.sendOrder.bind(this)}
+                      >
                         <Icon large right>
                           check
                         </Icon>
