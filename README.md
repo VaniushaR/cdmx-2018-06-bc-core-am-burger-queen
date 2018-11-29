@@ -8,7 +8,7 @@ Este proyecto busca ser una solución a la recepción de pedidos en un restauran
 
 Como punto de partida, se tiene la siguiente historia de usuario que nos comparten de un correo recibido del cliente:
 
-> Somos **Burguer Queen**, una cadena de comida rápida 24hrs.
+> Somos **Queen Burger**, una cadena de comida rápida 24hrs.
 >
 > Nuestra propuesta de servicio 24hrs ha tenido muy buena acogida, y para
 > expandirnos necesitamos un sistema que nos ayude a tomar los pedidos de los
@@ -60,7 +60,7 @@ Como punto de partida, se tiene la siguiente historia de usuario que nos compart
 > </table>
 >
 > Los clientes pueden escoger entre hamburguesas de res, de pollo, o vegetariana.
-> **Y por \$1 pueden agregarle queso o huevo.**
+> **Y por \$1 pueden agregarle queso.**
 >
 > Nuestros clientes son bastante indecisos, por lo que es muy común que cambien el
 > pedido varias veces antes de finalizarlo.

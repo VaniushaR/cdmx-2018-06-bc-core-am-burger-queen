@@ -1,6 +1,6 @@
 .logo {
-  height: 5em;
-  width: 8em;
+  height: 8em;
+  width: 10em;
   border-radius: 50%;
 }
 
@@ -13,11 +13,7 @@
   height: 60px;
   padding: 5px;
 }
-.offer-img {
-  padding: 5%;
-  height: 50%;
-  width: 50%;
-}
+
 .pic {
   height: 70px;
   width: 90px;
@@ -25,17 +21,17 @@
 .navigation {
   height: 15em;
 }
-.offert {
-  height: 120px;
-  width: 190px;
-}
+
 .waiter {
   color: white;
 }
-.waiter-card {
-  margin-top: 3em;
+.collapsible-card {
+  padding-top: 5.5em;
 }
-
+.waiter-card {
+  width: 85%;
+  height: 80%;
+}
 .buttons {
   display: grid;
   grid-template-columns: 50% 50%;

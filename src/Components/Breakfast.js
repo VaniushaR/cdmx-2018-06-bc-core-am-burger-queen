@@ -88,10 +88,10 @@ class Breakfast extends Component {
         console.log('Document written with ID: ', docRef.id);
         //confirm the order is sended and the time to be ready
         alert(
-          'Listo! La orden de ' +
+          'Ready! The order of ' +
             currentOrderClient +
-            ' estará lista en 15 min.' +
-            ' Buen trabajo ' +
+            ' will be ready in 15 min.' +
+            ' Nice job ' +
             currentWaiter +
             '!!'
         );
