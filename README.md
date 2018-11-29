@@ -180,7 +180,7 @@ El proyecto será _entregado_ subiendo el código a GitHub (`commit`/`push`) y l
 interfaz será desplegada usando GitHub pages u otro servicio de hosting.
 |
 
-## ToDo:
+# ToDo:
 
 ### General
 
@@ -230,6 +230,10 @@ interfaz será desplegada usando GitHub pages u otro servicio de hosting.
 - [ ] Uso fácil en pantallas táctiles (touch screens).
 - [ ] Estado actual del pedido siempre visible mientras tomamos un pedido.
 
-### Herramientas empleadas
+### Herramientas empleadas:
 
-** React **
+**ReactJS**
+**Firebase**
+**Firestore DataBase**
+**React-router**
+**React-materialize**
