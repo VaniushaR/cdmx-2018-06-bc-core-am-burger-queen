@@ -12,10 +12,10 @@ class App extends Component {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div>
           <Navigation />
-
           <Switch>
             <Route path="/" component={Login} exact />
             <Route path="/Kitchen" component={Kitchen} />
+            <Route component={Error} />
           </Switch>
         </div>
       </BrowserRouter>
@@ -24,4 +24,4 @@ class App extends Component {
 }
 
 export default App;
-//<Route component={Error} />
+//
