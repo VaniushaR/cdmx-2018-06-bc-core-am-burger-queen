@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
-import Logo from './Assets/burguerqB.jpg';
 import './App.css';
-
-import { Navbar, NavItem } from 'react-materialize';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Kitchen from './Components/Kitchen';
+import Navigation from './Components/Navigation';
 import Login from './Components/Login';
+import Error from './Components/Error';
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <BrowserRouter>
         <div>
-          <Navbar right large className="deep-purple darken-3">
-            <NavItem>
-              <img className="logo" src={Logo} alt="Logo" />
-            </NavItem>
-          </Navbar>
+          <Navigation />
+
+          <Switch>
+            <Route path="/" component={Login} exact />
+            <Route path="/Kitchen" component={Kitchen} />
+            <Route component={Error} />
+          </Switch>
         </div>
-        <Login />
-      </div>
+      </BrowserRouter>
     );
   }
 }

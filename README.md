@@ -60,7 +60,7 @@ Como punto de partida, se tiene la siguiente historia de usuario que nos compart
 > </table>
 >
 > Los clientes pueden escoger entre hamburguesas de res, de pollo, o vegetariana.
-> **Y por $1 pueden agregarle queso o huevo.**
+> **Y por \$1 pueden agregarle queso o huevo.**
 >
 > Nuestros clientes son bastante indecisos, por lo que es muy común que cambien el
 > pedido varias veces antes de finalizarlo.
@@ -80,46 +80,27 @@ Nuestra interfaz debe mostrar los dos menús (desayuno y resto del día), cada u
 con todos sus _productos_. El usuario debe poder ir eligiendo que _productos_
 agregar y la interfaz debe ir mostrando el _resumen del pedido_ con el total.
 
-![out](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
-
 ## Objetivos
 
 El objetivo principal de aprendizaje de este proyecto es construir una
-_interfaz web_ usando el _framework_ elegido (React, Vue o Angular). Todos estos
-frameworks de front-end atacan el mismo problema: **cómo mantener la interfaz y
-el estado sincronizados**. Así que esta experiencia espera familiarizarse con
-el concepto de _estado de pantalla_, y cómo cada cambio sobre el estado se va a
-ir reflejando en la interfaz (por ejemplo, cada vez que agregamos un _producto_
-a un _pedido_, la interfaz debe actualizar la lista del pedido y el total).
+_interfaz web_ usando React para mantener la interfaz y el estado sincronizados, cada cambio sobre el estado se va a ir reflejando en la interfaz (por ejemplo, cada vez que agregamos un _producto_ a un _pedido_, la interfaz debe actualizar la lista del pedido y el total).
 
 Como objetivo secundario, la implementación debe además seguir las
 recomendaciones para PWAs (_Progressive Web Apps_), lo cual incluye conceptos
-como **offline**. Para guiarte con respecto a este tema te recomendamos usar
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/?hl=es), que es
-una herramienta de Google que nos ayuda a asegurar que nuestras web apps sigan
-buenas prácticas. De hecho, usaremos Lighthouse a la hora de evaluar el
-proyecto.
+como **offline**.
 
 Finalmente, la interfaz debe estar diseñada específicamente para correr en
 **tablets**.
 
-Tópicos: _react_, _angular_, _vue_, _pwa_, _offline-first_, _service-worker_.
+## Consideraciones generales para el desarrollo:
 
-## Consideraciones generales
-
-Este proyecto se debe "resolver" de forma individual.
-
-La lógica del proyecto debe estar implementada completamente en JavaScript
+La lógica del proyecto está implementada completamente en JavaScript
 (ES6+), HTML y CSS y empaquetada de manera automatizada.
-En este proyecto SI está permitido usar librerías o frameworks
-(debes elegir entre [React](https://reactjs.org/), [Vue](https://vuejs.org/) o
-[Angular](https://angular.io/)).
+Se ocupó la librería React JS.
 
-La aplicación debe ser un _Single Page App_. Los pedidos los tomaremos desde una
+La aplicación es un _Single Page App_. Los pedidos los tomaremos desde una
 _tablet_, pero **no queremos una app nativa**, sino una web app que sea
-**responsive** y pueda funcionar **offline**. También necesitamos botones
-grandes para escoger los productos, y el estado actual del pedido siempre
-visible para poder confirmar con el cliente.
+**responsive** y pueda funcionar **offline**.
 
 La aplicación desplegada debe tener 80% o más el las puntuaciones de
 Performance, Progressive Web App, Accessibility y Best Practices de Lighthouse.
@@ -146,22 +127,6 @@ functions):
 │   ├── package.json
 └── README.md
 ```
-
-Por otro lado, la parte de la interfaz no está incluida, por lo cual, deberás de
-definir la estructura de carpetas y archivos que consideres necesaria, puedes
-guiarte de las convenciones del framework elegido. Por ende, los tests y el
-setup necesario para ejecutarlos serán realizados por ti.
-
-Para comenzar este proyecto tendrás que hacer un _fork_ y _clonar_ este
-repositorio.
-
-## Parte obligatoria
-
-### Definición del producto
-
-En el `README.md` cuéntanos qué decisiones de diseño tomaste, incluye bocetos
-tipo _story board_, info de despliegue e instrucciones para developers
-(dependencias, instalación, tests, ...).
 
 ### UI
 
@@ -211,185 +176,15 @@ Algunas de las ideas que nos ha sugerido nuestros clientes son:
 
 ## Entregables
 
-El proyecto será _entregado_ subiendo tu código a GitHub (`commit`/`push`) y la
-interfaz será desplegada usando GitHub pages u otro servicio de hosting que
-puedas haber encontrado en el camino.
+El proyecto será _entregado_ subiendo el código a GitHub (`commit`/`push`) y la
+interfaz será desplegada usando GitHub pages u otro servicio de hosting.
+|
 
-## Evaluación
-
-### Tech
-
-| Habilidad              | Nivel esperado |
-| ---------------------- | -------------- |
-| **JavaScript**         |                |
-| Estilo                 | 4              |
-| Nomenclatura/semántica | 3              |
-| Funciones/modularidad  | 3              |
-| Estructuras de datos   | 3              |
-| Tests                  | 3              |
-| **HTML**               |                |
-| Validación             | 3              |
-| Estilo                 | 3              |
-| Semántica              | 3              |
-| SEO                    | n/a            |
-| **CSS**                |                |
-| DRY                    | 3              |
-| Responsive             | 3              |
-| **SCM**                |                |
-| Git                    | 3              |
-| GitHub                 | 3              |
-| **CS**                 |                |
-| Lógica                 | 3              |
-| Arquitectura           | 2              |
-| Patrones/paradigmas    | n/a            |
-
-### UX
-
-| Habilidad       | Nivel esperado |
-| --------------- | -------------- |
-| User Centricity | 3              |
-| Entrevistas     | n/a            |
-| Testing         | 3              |
-| User Flow       | 3              |
-| Jerarquía       | 3              |
-| Alineación      | 3              |
-| Contraste       | 3              |
-| Color           | 3              |
-| Tipografía      | 3              |
-
-### Habilidades Blandas
-
-Para este proyecto esperamos que ya hayas alcanzado el nivel 4 en todas tus
-habilidades blandas. Te aconsejamos revisar la rúbrica:
-
-| Habilidad                                                  | Nivel esperado |
-| ---------------------------------------------------------- | -------------- |
-| Planificación y organización                               | 4              |
-| Autoaprendizaje                                            | 4              |
-| Solución de Problemas                                      | 4              |
-| Dar y recibir feedback                                     | 4              |
-| Adaptabilidad                                              | 4              |
-| Trabajo en equipo (trabajo colaborativo y responsabilidad) | n/a            |
-| Comunicación eficaz                                        | 4              |
-| Presentaciones                                             | 4              |
-
-## Primeros pasos
-
-1. Haz un _fork_ de este repo (en GitHub).
-
-2. Clona tu _fork_ en tu computadora:
-
-   ```sh
-   git clone git@github.com:<tu-usuario-de-github>/<cohortid>-burger-queen.git
-   cd <cohortid>-burger-queen
-   ```
-
-3. Crea una rama a partir de `master` para empezar a trabajar. Por ejemplo:
-
-   ```sh
-   git checkout -b develop
-   ```
-
-4. Crear proyecto en [Firebase](https://firebase.google.com/)
-
-5. Habilitar Firestore (_comenzar en modo bloqueado_) en sección de "Bases de
-   Datos" de [Firebase console](https://console.firebase.google.com/).
-
-6. Instalar utilidad de línea de comando de Firebase:
-
-   ```sh
-   npm i -g firebase-tools
-   ```
-
-7. Agregamos entorno de producción para desplegar:
-
-   ```sh
-   firebase use --add
-   ```
-
-8. Instalar dependencias de cloud functions:
-
-   ```sh
-   # usando yarn
-   cd functions && yarn && cd ..
-   # alternativamente, usando npm
-   cd functions && npm install && cd ..
-   ```
-
-9. Desplegar:
-
-   ```sh
-   firebase deploy
-   ```
-
-10. Llegado a este punto ya puedes comenzar con el _front-end_ :wink:
-
----
-
-Nota para estudiantes que elijan React y quieran usar `create-react-app`:
-
-Si tratas de usar `create-react-app` en el directorio del proyecto recibirás un
-error diciendo que hay archivos que podrían presentar un conflicto. Para evitar
-este problema puedes crear una nueva app usando `create-react-app` y de ahí
-_mezclarla_ con la carpeta del proyecto:
-
-```sh
-# si estabase en la carpeta del proyecto, salimos a la carpeta de más arriba
-cd ..
-
-create-react-app burger-queen-tmp
-cp -r burger-queen/* burger-queen-tmp/
-cp -r burger-queen-tmp/.gitignore burger-queen-tmp/* burger-queen/
-rm -rf burger-queen-tmp
-cd burger-queen
-```
-
----
-
-## Pistas / Tips
-
-### Frameworks / libraries
-
-- [React](https://reactjs.org/)
-- [Vue](https://vuejs.org/)
-- [Angular](https://angular.io/)
-
-### Herramientas
-
-- [npm-scripts](https://docs.npmjs.com/misc/scripts)
-- [Babel](https://babeljs.io/)
-- [webpack](https://webpack.js.org/)
-
-### PWA
-
-- [Tu primera Progressive Web App - Google developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es)
-- [Progressive Web Apps - codigofacilito.com](https://codigofacilito.com/articulos/progressive-apps)
-- [offlinefirst.org](http://offlinefirst.org/)
-- [Usando Service Workers - MDN](https://developer.mozilla.org/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Cómo habilitar datos sin conexión - Firebase Docs](https://firebase.google.com/docs/firestore/manage-data/enable-offline?hl=es-419)
-
-### Serverless
-
-- [Qué es eso de serverless? - @PamRucinque en Medium](https://medium.com/@PamRucinque/qu%C3%A9-es-eso-de-serverless-f4f6c8949b87)
-- [Qué es Serverless? | FooBar - YouTube](https://www.youtube.com/watch?v=_SYHUpLi-2U)
-- [Firebase](https://firebase.google.com/)
-- [Serverless Architectures - Martin Fowler](https://www.martinfowler.com/articles/serverless.html)
-
-### Cloud functions
-
-- [Cloud functions - Firebase Docs](https://firebase.google.com/docs/functions/?hl=es-419)
-
-## Checklist
+## ToDo:
 
 ### General
 
 - [ ] Producto final sigue los lineamientos del diseño.
-
-### `README.md`
-
-- [ ] Documenta proceso de diseño.
-- [ ] Incluye info para developers (deps, instalación, uso, despliegue, testing,
-      ...).
 
 ### Lighthouse
 
@@ -434,3 +229,7 @@ cd burger-queen
       íconos, ...) en iOS y Android.
 - [ ] Uso fácil en pantallas táctiles (touch screens).
 - [ ] Estado actual del pedido siempre visible mientras tomamos un pedido.
+
+### Herramientas empleadas
+
+** React **

@@ -1,6 +1,5 @@
 import firebase from 'firebase';
 
-// Initialize Firebase
 var config = {
   apiKey: 'AIzaSyAymTnu-ZB2YMUgfMEvlIqgufdSrmbJRxQ',
   authDomain: 'burguer-queen-839fc.firebaseapp.com',
@@ -12,4 +11,11 @@ var config = {
 
 const firebaseInit = firebase.initializeApp(config);
 
-export { firebaseInit };
+const firestore = firebase.firestore();
+const settings = { /* your settings... */ timestampsInSnapshots: true };
+firestore.settings(settings);
+
+// Initialize Cloud Firestore through Firebase
+const db = firebase.firestore();
+
+export { firebaseInit, db };

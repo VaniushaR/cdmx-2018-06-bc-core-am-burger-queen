@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Button, Icon } from 'react-materialize';
+import { Col, Button, Icon, Row } from 'react-materialize';
 import Breakfast from './Breakfast';
 
 class Menu extends Component {
@@ -9,17 +9,17 @@ class Menu extends Component {
       seeBreakfast: false,
       seeDinner: false
     };
-    console.log(this.state.seeBreakfast);
-    console.log(this.state.seeDinner);
+    //  console.log(this.state.seeBreakfast);
+    //  console.log('there should be the dinner for', this.state.seeDinner);
+    //onClick={this.goToKitchen.bind()}
   }
 
   render() {
-    if (this.state.seeBreakfast == true) {
-      return <Breakfast />;
+    if (this.state.seeBreakfast === true) {
+      return <Breakfast waiter={this.props.attentionBy} />;
     }
     return (
       <div>
-        <h2>Clients Order: </h2>
         <Row>
           <Col s={6} m={6}>
             <section className="action">
@@ -28,7 +28,7 @@ class Menu extends Component {
                 waves="yellow"
                 onClick={() => {
                   this.setState({ seeBreakfast: true });
-                  console.log(this.state.seeBreakfast);
+                  //console.log(this.state.seeBreakfast);
                 }}
               >
                 <Icon right>local_cafe</Icon>
@@ -58,25 +58,3 @@ class Menu extends Component {
 }
 
 export default Menu;
-
-/*for (var type in MenuData) {
- console.log(type);
-}
-            const variety = Object.keys(MenuData);
-            console.log(variety);
-            variety.forEach(function(element) {
-              console.log(element);
-              console.log(typeof element);
-            });
-
-
-            for (var item in MenuData) {
-              console.log(item);
-              console.log(typeof item);
-            }
-
-
-            {MenuData.map(item => {
-          console.log(item);
-        })}
-            */

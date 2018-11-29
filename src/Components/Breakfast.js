@@ -10,6 +10,7 @@ import {
   CollectionItem,
   Icon
 } from 'react-materialize';
+import { db } from '../Components/Credentials';
 
 class Breakfast extends Component {
   constructor() {
@@ -17,12 +18,16 @@ class Breakfast extends Component {
     this.state = {
       order: [],
       client: '',
-      total: 0
+      total: 0,
+      attention: null
     };
   }
 
   nameKeeper = event => {
     this.setState({ client: event.target.value });
+    this.setState({
+      attention: this.props.waiter
+    });
   };
 
   //Function to add or rest the value of the items
@@ -57,36 +62,68 @@ class Breakfast extends Component {
   delete = index => {
     this.setState({
       order: this.state.order.filter((item, i) => {
-        console.log('forEach item', item);
+        //console.log('forEach item', item);
 
         return i !== index;
       })
     });
     this.state.order.forEach((item, i) => {
       if (i === index) {
-        console.log('forEach sustraction', this.state.total);
+        //console.log('forEach sustraction', this.state.total);
         this.setState({ total: this.state.total - parseInt(item.price) });
       }
     });
   };
-  //Function to send the order to the kitchen and being processed
+  //Function to send the order to the kitchen (firestore database) and being processed
   sendOrder = () => {
-    console.log(this.state);
+    //variables to keep the state on the promises
+    const orderSender = this.state;
+    const currentOrderClient = this.state.client;
+    const currentWaiter = this.state.attention;
+    console.log(currentOrderClient);
+    //create and keep the order in the collection orders in firestore db
+    db.collection('orders')
+      .add({ orderSender })
+      .then(function(docRef) {
+        console.log('Document written with ID: ', docRef.id);
+        //confirm the order is sended and the time to be ready
+        alert(
+          'Listo! La orden de ' +
+            currentOrderClient +
+            ' estará lista en 15 min.' +
+            ' Buen trabajo ' +
+            currentWaiter +
+            '!!'
+        );
+      })
+      .catch(function(error) {
+        console.error('Error adding document: ', error);
+      });
+    //clean the state to be able to create new orders
+    this.setState({
+      order: [],
+      client: '',
+      total: 0,
+      attention: null
+    });
+    //clean input of the client's Name
+    const eraseInput = document.getElementById('clientsName');
+    eraseInput.value = '';
+    //send to the kitchen component
   };
 
   render() {
     const List = MenuData.Desayunos.map((item, i) => {
-      //console.log(item.name);
-      //console.log(item.price);
       return (
-        <div>
-          <div key={i}>
+        <div key={i}>
+          <div>
             <Col s={4} m={4}>
               <Card
                 className="medium"
                 header={<CardTitle image={item.pic}>{item.name}</CardTitle>}
                 actions={[
                   <Button
+                    key={i}
                     large
                     onClick={this.handleOnClick}
                     name={item.name}
@@ -114,6 +151,7 @@ class Breakfast extends Component {
               <Card className="amber lighten-4">
                 <Card>
                   <input
+                    id="clientsName"
                     type="text"
                     onChange={this.nameKeeper.bind(this)}
                     placeholder="Write the client's name"

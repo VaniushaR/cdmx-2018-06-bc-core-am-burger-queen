@@ -3,16 +3,17 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
 import firebaseInit from './Credentials';
 import Menu from './Menu';
-import avatar from '../Assets/chef.png';
 import Time from './Date';
 import {
-  Col,
-  Card,
-  Row,
   Button,
   Collapsible,
-  CollapsibleItem
+  CollapsibleItem,
+  Row,
+  Navbar,
+  NavItem
 } from 'react-materialize';
+import { NavLink } from 'react-router-dom';
+//import { BrowserRouter, Route } from 'react-router-dom';
 
 class Login extends Component {
   firebaseInit;
@@ -30,7 +31,6 @@ class Login extends Component {
   componentDidMount = () => {
     firebase.auth().onAuthStateChanged(user => {
       this.setState({ isSignedIn: !!user });
-      console.log('user', user);
     });
   };
 
@@ -39,21 +39,39 @@ class Login extends Component {
       <div>
         {this.state.isSignedIn ? (
           <div>
-            <Collapsible popout defaultActiveKey={1}>
-              <CollapsibleItem
-                header={firebase.auth().currentUser.displayName + ' is working'}
-                icon="account_circle"
-              >
-                <Time />
-                <h5>
-                  ¡Nice Job {firebase.auth().currentUser.displayName + '!'}
-                </h5>
-                <Button onClick={() => firebase.auth().signOut()}>
-                  Close my session
-                </Button>
-              </CollapsibleItem>
-            </Collapsible>
-            <Menu />
+            <div className="waiter-card">
+              <Collapsible popout defaultActiveKey={1}>
+                <CollapsibleItem
+                  header={
+                    firebase.auth().currentUser.displayName + ' is working'
+                  }
+                  icon="account_circle"
+                >
+                  <Time />
+                  <h5>
+                    ¡Nice Job {firebase.auth().currentUser.displayName + '!'}
+                  </h5>
+                  <Button onClick={() => firebase.auth().signOut()}>
+                    Close my session
+                  </Button>
+                </CollapsibleItem>
+              </Collapsible>
+              <div>
+                <Row>
+                  <Navbar className="deep-purple darken-3">
+                    <NavItem className="right">
+                      <NavLink to="/Kitchen">
+                        <Button>Kitchen</Button>
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <h4>Clients Order: </h4>
+                    </NavItem>
+                  </Navbar>
+                </Row>
+              </div>
+              <Menu attentionBy={firebase.auth().currentUser.displayName} />
+            </div>
           </div>
         ) : (
           <div>
